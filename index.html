@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clickable Cards with JavaScript</title>
+    <style>
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f0f0f0;
+          margin: 0;
+          flex-wrap: wrap;
+      }
+
+      .card {
+          width: 300px;
+          height: 150px;
+          background-color: #fff;
+          border: 1px solid #ddd;x
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          margin: 20px;
+          padding: 20px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: background-color 0.3s;
+      }
+
+      .card h2 {
+          margin: 0;
+      }
+
+      .card:hover {
+          background-color: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function createCard(id, title, url, isNewTab = false) {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.id = id;
+
+        card.onclick = function () {
+          if (isNewTab) {
+            window.open(url, "_blank");
+          } else {
+            window.location.href = url;
+          }
+        };
+
+        const cardTitle = document.createElement("h2");
+        cardTitle.textContent = title;
+        card.appendChild(cardTitle);
+
+        return card;
+      }
+      document.body.appendChild(
+        createCard("card1", "Transactions", "transaction.html", true)
+      );
+      document.body.appendChild(
+        createCard("card2", "Shopping", "shopping.html", true)
+      );
+      document.body.appendChild(
+        createCard("card3", "API", "api-calling.html", true)
+      );
+    </script>
+  </body>
+</html>

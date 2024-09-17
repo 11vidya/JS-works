@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  height: 100vh;
+}
+
+.dashboard {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.categories {
+  margin-bottom: 20px;
+}
+
+.categories button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.details {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  display: none;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+#pic {
+  background-image: url(images/blue-digital-technology-background.jpg);
+  height: 1000px;
+}
